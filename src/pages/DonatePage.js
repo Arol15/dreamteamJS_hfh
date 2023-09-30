@@ -7,6 +7,7 @@ export default function DonatePage() {
     address_2: "",
     city: "",
     zip: "",
+    description: "",
     file: null,
   });
 
@@ -28,6 +29,15 @@ export default function DonatePage() {
     // Object.entries(formData).forEach(([key, value]) => {
     //   data.append(key, value);
     // });
+
+    //setFormData({
+    //   name: "",
+    //   address_1: "",
+    //   address_2: "",
+    //   city: "",
+    //   zip: "",
+    //   file: null,
+    // })
   }
 
   return (
@@ -94,6 +104,17 @@ export default function DonatePage() {
           id="zip"
           name="zip"
           value={formData.zip}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="description">Description:</label>
+        <textarea
+          type="text"
+          id="description"
+          name="description"
+          value={formData.description}
           onChange={handleInputChange}
           required
         />
