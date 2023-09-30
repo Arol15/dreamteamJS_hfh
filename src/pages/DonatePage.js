@@ -16,10 +16,10 @@ export default function DonatePage() {
     setFormData({ ...formData, [name]: value });
   };
 
-  // const handleImageUpload = (e) => {
-  //   const file = e.target.files[0];
-  //   setFormData({ ...formData, image: file });
-  // };
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    setFormData({ ...formData, image: file });
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -121,14 +121,14 @@ export default function DonatePage() {
       </div>
       <div>
         <label htmlFor="image">Image:</label>
-        {/* <input
-            type="file"
-            id="image"
-            name="image"
-            accept="image/*"
-            required
-            onChange={handleImageUpload}
-          /> */}
+        <input
+          type="file"
+          id="image"
+          name="image"
+          accept="image/*"
+          required
+          onChange={handleImageUpload}
+        />
       </div>
       <button type="submit">Submit</button>
     </form>
