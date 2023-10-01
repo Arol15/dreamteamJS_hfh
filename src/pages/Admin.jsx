@@ -50,7 +50,7 @@ useEffect(() => {
 })} */}
           
   {postings && postings.map((post, index) => (
-    <div className='w-full mt-10' key={index}>
+    <div className='w-full mt-10 pl-10' key={index}>
     <div  className="max-w-md  border border-gray-200 rounded-lg shadow-lg bg-white dark:border-gray-700 mb-4">
       <a href="/">
         <img className="w-full rounded-t-lg" src={post.image_uri} alt="" />
@@ -61,10 +61,10 @@ useEffect(() => {
         </a>
         <p className="mb-3 font-bold dark:text-gray-600">{post.description}</p>
         <div className="flex justify-between">
-          <button className="inline-flex items-center px-7 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <button className="inline-flex items-center px-7 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 ">
            Received
           </button>
-          <button className="inline-flex items-center px-7 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+          <button className="inline-flex items-center px-7 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-600 focus:outline-none  dark:bg-green-600 dark:hover:bg-green-700">
           Verify
           </button>
         </div>
