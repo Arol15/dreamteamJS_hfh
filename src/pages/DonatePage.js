@@ -38,11 +38,19 @@ export default function DonatePage() {
   }
 
   return (
-    <>
-      <h1>Donate Today!</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
+    <div>
+      <h1 className="text-center text-6xl text-blue-800 py-4">Donate Today!</h1>
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg"
+      >
+        <div className="mb-4">
+          <label
+            htmlFor="name"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Name:
+          </label>
           <input
             type="text"
             id="name"
@@ -50,10 +58,16 @@ export default function DonatePage() {
             value={formData.name}
             onChange={handleInputChange}
             required
+            className="border rounded-lg py-2 px-3 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
-        <div>
-          <label htmlFor="company_name">Company Name:</label>
+        <div className="mb-4">
+          <label
+            htmlFor="company_name"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Company Name:
+          </label>
           <input
             type="text"
             id="company_name"
@@ -61,10 +75,16 @@ export default function DonatePage() {
             value={formData.company_name}
             onChange={handleInputChange}
             required
+            className="border rounded-lg py-2 px-3 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
-        <div>
-          <label htmlFor="address_1">Address Line 1:</label>
+        <div className="mb-4">
+          <label
+            htmlFor="address_1"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Address Line 1:
+          </label>
           <input
             type="text"
             id="address_1"
@@ -72,10 +92,16 @@ export default function DonatePage() {
             value={formData.address_1}
             onChange={handleInputChange}
             required
+            className="border rounded-lg py-2 px-3 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
-        <div>
-          <label htmlFor="address_2">Address Line 2:</label>
+        <div className="mb-4">
+          <label
+            htmlFor="address_2"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Address Line 2:
+          </label>
           <input
             type="text"
             id="address_2"
@@ -83,10 +109,16 @@ export default function DonatePage() {
             value={formData.address_2}
             onChange={handleInputChange}
             required
+            className="border rounded-lg py-2 px-3 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
-        <div>
-          <label htmlFor="city">City:</label>
+        <div className="mb-4">
+          <label
+            htmlFor="city"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            City:
+          </label>
           <input
             type="text"
             id="city"
@@ -94,10 +126,16 @@ export default function DonatePage() {
             value={formData.city}
             required
             onChange={handleInputChange}
+            className="border rounded-lg py-2 px-3 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
-        <div>
-          <label htmlFor="zip">Zip code:</label>
+        <div className="mb-4">
+          <label
+            htmlFor="zip"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Zip code:
+          </label>
           <input
             type="text"
             id="zip"
@@ -105,10 +143,16 @@ export default function DonatePage() {
             value={formData.zip}
             onChange={handleInputChange}
             required
+            className="border rounded-lg py-2 px-3 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
-        <div>
-          <label htmlFor="description">Description:</label>
+        <div className="mb-4">
+          <label
+            htmlFor="description"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Description:
+          </label>
           <textarea
             type="text"
             id="description"
@@ -116,10 +160,16 @@ export default function DonatePage() {
             value={formData.description}
             onChange={handleInputChange}
             required
+            className="border rounded-lg py-2 px-3 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
-        <div>
-          <label htmlFor="image">Image:</label>
+        <div className="mb-4">
+          <label
+            htmlFor="image"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Image:
+          </label>
           <input
             type="file"
             id="image"
@@ -127,10 +177,16 @@ export default function DonatePage() {
             accept="image/*"
             required
             onChange={handleImageUpload}
+            className="border rounded-lg py-2 px-3 w-full focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          className="inline-flex items-center px-4 py-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Submit
+        </button>
       </form>
-    </>
+    </div>
   );
 }
