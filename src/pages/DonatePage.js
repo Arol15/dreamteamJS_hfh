@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function DonatePage() {
   const [formData, setFormData] = useState({
     name: "",
+    company_name: "",
     address_1: "",
     address_2: "",
     city: "",
@@ -23,21 +24,17 @@ export default function DonatePage() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // const data = new FormData();
-
-    // Turn our formData state into data we can use with a form submission
-    // Object.entries(formData).forEach(([key, value]) => {
-    //   data.append(key, value);
-    // });
-
-    //setFormData({
-    //   name: "",
-    //   address_1: "",
-    //   address_2: "",
-    //   city: "",
-    //   zip: "",
-    //   file: null,
-    // })
+    alert("Thank you for your donation!!!");
+    setFormData({
+      name: "",
+      company_name: "",
+      address_1: "",
+      address_2: "",
+      city: "",
+      zip: "",
+      description: "",
+      file: null,
+    });
   }
 
   return (
