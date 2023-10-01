@@ -1,22 +1,22 @@
+import { BrowserRouter , Route, Router } from "react-router-dom"
 import "./App.css";
-<<<<<<< HEAD
 import Admin from './pages/Admin'
 import Navbar from "./pages/Navbar";
-=======
-import Admin from "./pages/Admin";
->>>>>>> 158679c8c3fae4f2ae432148d886752f61d57e74
+import DonatePage from './pages/DonatePage'
+import "./style.css";
+
+import Front from "./pages/Front";
 
 function App() {
   return (
-    <div className="App">
-<<<<<<< HEAD
-      <Navbar />
-     <Admin />
-=======
-      <Admin />
->>>>>>> 158679c8c3fae4f2ae432148d886752f61d57e74
-    </div>
+    <BrowserRouter>
+      <Navbar /> 
+     <Route path='/' element={<Front />} />
+     <Route path='/donate' element={<DonatePage />} /> 
+     <Route path='/admin' element={<Admin />} />
+     </BrowserRouter>
   );
 }
+
 
 export default App;

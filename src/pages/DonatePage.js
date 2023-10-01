@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 export default function DonatePage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -22,8 +23,12 @@ export default function DonatePage() {
     setFormData({ ...formData, image: file });
   };
 
+  // const history = useHistory(); // Access the history object
+
+
   function handleSubmit(e) {
     e.preventDefault();
+    // history.push('/front');
     alert("Thank you for your donation!!!");
     setFormData({
       name: "",
@@ -35,10 +40,12 @@ export default function DonatePage() {
       description: "",
       file: null,
     });
+    
   }
 
   return (
     <div>
+      
       <h1 className="text-center text-6xl text-blue-800 py-4">Donate Today!</h1>
       <form
         onSubmit={handleSubmit}
