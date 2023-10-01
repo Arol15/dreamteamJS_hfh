@@ -1,64 +1,36 @@
-
+import { useState, useEffect } from "react"
 
 
 const Admins = () => {
 
-  const cardsData = [
-    {
-      title: 'Card 1',
-      description: 'This is the first card.',
-      imageUrl: '/card1.jpg',
-    },
-    {
-      title: 'Card 2',
-      description: 'This is the second card.',
-      imageUrl: '/card2.jpg',
-    },
-    {
-      title: 'Card 3',
-      description: 'This is the third card.',
-      imageUrl: '/card3.jpg',
-    },
-    {
-      title: 'Card 3',
-      description: 'This is the third card.',
-      imageUrl: '/card3.jpg',
-    },
-    {
-      title: 'Card 3',
-      description: 'This is the third card.',
-      imageUrl: '/card3.jpg',
-    },
-    {
-      title: 'Card 3',
-      description: 'This is the third card.',
-      imageUrl: '/card3.jpg',
-    },
-    {
-      title: 'Card 3',
-      description: 'This is the third card.',
-      imageUrl: '/card3.jpg',
-    },
-    {
-      title: 'Card 3',
-      description: 'This is the third card.',
-      imageUrl: '/card3.jpg',
-    },
-    {
-      title: 'Card 3',
-      description: 'This is the third card.',
-      imageUrl: '/card3.jpg',
-    },
-    {
-      title: 'Card 3',
-      description: 'This is the third card.',
-      imageUrl: '/card3.jpg',
-    },
-  ];
+  const [data, setData] = useState('')
+
+  const URL = `https://us-central1-data-253523.cloudfunctions.net/posting`
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(URL);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        // Handle errors here
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    console.log(data)
+  
+    // Call fetchData to initiate the data fetching
+    
+  }, []);
+  
   return (
     <>
-    <h1 className="font-bold text-4xl flex justify-center items-center mt-8">Admin Portal</h1>
-    <div className="flex flex-wrap justify-center">
+    {/* <div className="flex flex-wrap justify-center">
       {cardsData.map((card, index) => (
         <div key={index} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex mx-8 my-4 mt-24">     
             <img
@@ -86,7 +58,7 @@ const Admins = () => {
           </div>
         </div>
       ))}
-    </div>
+    </div> */}
   </>
   
 
